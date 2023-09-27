@@ -6,3 +6,5 @@ pytest-cov==4.0.0
 requests==2.26.0
 #rust based linter
 ruff==0.0.284
+# project specific
+prettytable==3.9.0

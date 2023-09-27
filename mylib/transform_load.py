@@ -8,7 +8,7 @@ import csv
 import os
 
 #load the csv file and insert into a new sqlite3 database
-def load(dataset="/workspaces/sqlite-lab/data/GroceryDB_IgFPro.csv"):
+def load(dataset="data/GroceryDB_IgFPro.csv"):
     """"Transforms and Loads data into the local SQLite3 database"""
 
     #prints the full working directory and path
