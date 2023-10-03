@@ -1,6 +1,6 @@
 import argparse
 from mylib.extract import extract
-from mylib.transform_load import load
+from mylib.transform_load import create_and_load_db
 from mylib.query import query
 
 parser = argparse.ArgumentParser(description="Process some data.")
@@ -15,12 +15,9 @@ if args.extract:
     extract()
 
 if args.load:
-    print("Loading data...")
-    load()
+    print("Creating DB and loading data...")
+    create_and_load_db()
 
 if args.query:
     print("Querying data...")
     query()
-
-if __name__ == "__main__":
-    load()
