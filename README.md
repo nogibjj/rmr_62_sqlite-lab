@@ -44,6 +44,7 @@ Function to drop data based on the passed condition and table
 ![Alt text](https://user-images.githubusercontent.com/36940292/272156679-37cfa2b6-9cf8-4c51-aa04-3b5078e9e4a4.png)
 
 #### `Reading` data from the database
+![Alt text](https://user-images.githubusercontent.com/36940292/272158416-e62dc846-3a9f-4439-a9f6-6f72c21a2e40.png)
 ![Alt text](https://user-images.githubusercontent.com/36940292/272158764-1ce859c4-5ca5-4629-a078-fb6113bb87ab.png)
 
 #### `Deleting` all instances of where team is POR
