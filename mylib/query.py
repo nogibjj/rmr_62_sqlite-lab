@@ -15,10 +15,11 @@ def print_pretty_table(cursor):
     print(x)
 
 def query(query_str:str='', db_name:str='GroceryDB.db', 
-           ) -> str:
+          sql_conn:sqlite3.Connection=None) -> str:
     """Query the database"""
     if not sql_conn:
         conn = sqlite3.connect(db_name)
+        sql_conn = conn
     else:
         conn = sql_conn
     cursor = conn.cursor()
