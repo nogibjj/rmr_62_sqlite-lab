@@ -9,7 +9,7 @@ Explore the power of this custom CLI, empowering users to effortlessly handle da
 Note: Feel free to customize, enhance, and extend the capabilities of this versatile tool to suit your unique needs.
 
 ### Project Architecture
-
+![Alt text](https://user-images.githubusercontent.com/36940292/272178352-66e1abb3-2e21-43f2-a979-1f32e5eee22c.png)
 
 ### Function Descriptions (Located in ~/mylib):
 
