@@ -3,11 +3,12 @@ import sqlite3
 
 
 def update_db(conn:sqlite3.Connection=None, 
-              query_str:str='',
-              sql_conn:sqlite3.Connection=None)->None:
+              database:str="GroceryDB",
+              query_str:str='')->None:
     """Update the database"""
     if not conn:
-        conn = sqlite3.connect("GroceryDB")
+        conn = sqlite3.connect(database)
+        print(f"Database {database} Connected to.")
 
     cursor = conn.cursor()
     

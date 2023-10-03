@@ -14,15 +14,14 @@ def print_pretty_table(cursor):
 
     print(x)
 
-def query(query_str:str='', db_name:str='GroceryDB.db', 
+def query(query_str:str='', db_name:str='GroceryDB', 
           sql_conn:sqlite3.Connection=None) -> str:
     """Query the database"""
     if not sql_conn:
-        conn = sqlite3.connect(db_name)
-        sql_conn = conn
-    else:
-        conn = sql_conn
-    cursor = conn.cursor()
+        sql_conn = sqlite3.connect(db_name)
+        print(f"Database {db_name} Connected to.")
+    
+    cursor = sql_conn.cursor()
     
     if query_str == '':
         cursor.execute("SELECT * FROM GroceryDB LIMIT 5")
@@ -32,13 +31,12 @@ def query(query_str:str='', db_name:str='GroceryDB.db',
         cursor.execute("SELECT * FROM GroceryDB where count_products = '11'")
         print("Rows where count_products = '11':")
         print_pretty_table(cursor)
-
     else:
         cursor.execute(query_str)
         print(f"QUERY: {query_str}")
         print("Query results:")
         print_pretty_table(cursor)
 
-    conn.close()
+    sql_conn.close()
     
     return "Success"
