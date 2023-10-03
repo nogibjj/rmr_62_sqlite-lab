@@ -37,14 +37,15 @@ if __name__ == "__main__":
         "-o",
         "--condition",
         help="Condition for delete",
-        default="count_products = '11'"
+        default="count_products = '11'",
     )
     parser.add_argument("-p", "--query_str", help="Query string", default="")
     parser.add_argument(
         "-y",
         "--update_str",
         help="Update string",
-        default="UPDATE GroceryDB SET semantic_tree_name = 'Rakeen' WHERE count_products = '11'"
+        default="UPDATE GroceryDB SET semantic_tree_name = 'Rakeen' WHERE '\
+        'count_products = '11'",
     )
 
     args = parser.parse_args()
@@ -58,7 +59,7 @@ if __name__ == "__main__":
     if args.load:
         print("Creating DB and loading data...")
         conn = create_and_load_db(args.file, args.database)
-    
+
     # Update
     if args.update:
         print("Updating data...")

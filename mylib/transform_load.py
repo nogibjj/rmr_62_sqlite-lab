@@ -19,7 +19,8 @@ def create_and_load_db(dataset:str="data/GroceryDB_IgFPro.csv",
 
     column_names = [name.replace('%', 'Perc') if name else 'ID' for name in payload[0]]
     # replace the start of the string if its a number
-    column_names = [f"{name[1:]}{name[0]}" if name[0].isdigit() else name for name in column_names]
+    column_names = [f"{name[1:]}{name[0]}" if name[0].isdigit() else 
+                    name for name in column_names]
     
     if not sql_conn:
         conn = sqlite3.connect(f'{db_name}')
