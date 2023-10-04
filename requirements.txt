@@ -10,3 +10,5 @@ ruff==0.0.284
 prettytable==3.9.0
 pandas==2.0.3
 lxml==4.9.3
+html5lib==1.1
+bs4==0.0.1

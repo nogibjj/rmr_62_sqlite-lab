@@ -26,7 +26,7 @@ if __name__ == "__main__":
         "-v",
         "--url",
         help="CSV url",
-        default="https://raw.githubusercontent.com/Barabasi-Lab/GroceryDB/main/data/GroceryDB_IgFPro.csv",
+        default="https://www.basketball-reference.com/leagues/NBA_2023_per_game.html#per_game_stats",
     )
     parser.add_argument(
         "-f", "--file", help="File path", default="data/GroceryDB_IgFPro.csv"

@@ -13,15 +13,15 @@ Note: Feel free to customize, enhance, and extend the capabilities of this versa
 
 ### Function Descriptions (Located in ~/mylib):
 
-`extract(url:str, file_path:str->str` (in extract.py):
+`extract(url:str, file_path:str) -> str` (in extract.py):
 
 Extracts data from the passed url to a csv file. The data must be in an HTML table format
 
-`create_and_load_db(dataset:str, db_name:str="GroceryDB", sql_conn:sqlite3.Connection=None)->sqlite3.Connection` (in transform_load.py):
+`create_and_load_db(dataset:str, db_name:str="GroceryDB", sql_conn:sqlite3.Connection=None) -> sqlite3.Connection` (in transform_load.py):
 
 Function to create a local SQLite3 database and load data into it.The data is transformed from a CSV file with appropriate format changes made.
 
-`update_db(conn:sqlite3.Connection=None, database:str="GroceryDB", query_str:str='')->None` (in updateDb.py):
+`update_db(conn:sqlite3.Connection=None, database:str="GroceryDB", query_str:str='') -> None` (in updateDb.py):
 
 Updates entries in the specified data base, based on the passed query. If query is left empty, this perform a defualt update on the `GroceryDb`
 
